@@ -1,0 +1,14 @@
+name: clowntown
+services:
+  dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    working_dir:
+      /clowntown
+    env_file:
+      ./.env
+    environment: {}
+    volumes:
+      - ./home:/home/clown
+      - .:/clowntown
